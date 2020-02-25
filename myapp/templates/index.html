@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/mycss.css"></link>
+</head>
+<body>
+    <h2>Hello World!!</h2>
+    
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <h2> Hello, {{appname}} !! {{x}} </h2>
+    <a href="/about"> About </a> 
+    <a href="/library"> Library </a>
+    <a href="/sports"> Sports </a> 
+    <a href="/articles"> Articles </a>
+    
+    
+    
+    
+    
+    <br>
+
+    {% csrf_token %}
+
+    {% if y is 100 %}
+    
+           {{ y }}
+
+    {% endif %}
+    
+    {% for i in List %}
+
+        {{i}}
+
+    {% endfor %}
+
+</body>
+</html>
+
