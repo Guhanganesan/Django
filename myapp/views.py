@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 from django.template import loader 
 
-from .models import Student
+#from .models import Student
 
 def hello(request):
     return HttpResponse("<h2> Welcome!!!</h2>")
@@ -37,7 +37,7 @@ def articles(request,name,date,month,year):
     data={"articles_name":name,"date":date,"month":month,"year":year}
     temp=loader.get_template('articles.html')
     return HttpResponse(temp.render(data))
-
+"""
 def stdData(request):
     obj1=Student()
     obj1.name="Anbu"
@@ -60,6 +60,18 @@ def stdData(request):
     L=[obj1, obj2, obj3]
     temp=loader.get_template('student.html')
     return HttpResponse(temp.render({'listofdata':L}))
+
+"""
+from .forms import ContactForm
+
+def contact(request):
+    form=ContactForm()
+    temp=loader.get_template('form.html')
+    return HttpResponse(temp.render({'form':form}))
+
+
+
+
 
 
 
